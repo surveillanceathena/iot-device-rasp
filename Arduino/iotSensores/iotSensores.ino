@@ -62,7 +62,7 @@ int send = 0;
 // funcao registrada no setup que serah chamada quando o master requisitar dados no barramento
 void requestEvent() {
 
-  //para distancia o sensor eh 0003 e 0001 -> sensor acionado (algo proximo)
+  //para distancia o sensor eh 0001 e 0001 -> sensor acionado (algo proximo)
   if(send == 0){
     if(distancia < 20 && distancia >=1){
       Wire.write("00010001");
