@@ -29,4 +29,4 @@ As bibliotecas já foram adicionadas ao projeto.
 
 
 
-2 - Arduino -> IDE Arduíno 1.8.7 
+Arduino -> IDE Arduíno 1.8.7 
