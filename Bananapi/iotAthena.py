@@ -21,6 +21,7 @@ i2c.flags = pylibi2c.I2C_M_IGNORE_NAK
 buf = bytes(256)
 
 firebase = firebase.FirebaseApplication('https://surveillaceathenaiot.firebaseio.com/', None)
+#firebase = firebase.FirebaseApplication('https://35.201.97.85/', None)
 
 while True:
 
@@ -30,7 +31,7 @@ while True:
         
         now = datetime.datetime.now()
         date = now.strftime("%Y-%m-%d %H:%M:%S")
-        firebase.put('/sensores/bananapi_armbian_m1',str(data[:4]),str(data[4:8]) + ' - '+date+']')        
-        print '['+ date +'] sensor: ' + data[:4] + ' value:' + data[4:8] 
+        firebase.put('/sensores','S'+str(data[:4]),str(data[4:8]) + ' - '+date+']')        
+        print '['+ date +'] sensor: S' + data[:4] + ' value:' + data[4:8] 
     
-    time.sleep( 0.3 )
+    time.sleep( 2 )
